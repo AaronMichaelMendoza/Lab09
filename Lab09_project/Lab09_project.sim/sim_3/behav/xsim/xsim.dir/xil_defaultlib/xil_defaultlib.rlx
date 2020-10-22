@@ -2,8 +2,8 @@
 2020.1
 May 27 2020
 20:09:33
-C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/Lab09_project.sim/sim_3/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/alu.sv,1603385333,systemVerilog,,C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/register.sv,,alu,,,,,,,,
-C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/basys3_lab9.sv,1603382049,systemVerilog,,,,basys3_lab9,,,,,,,,
-C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/register.sv,1603382705,systemVerilog,,C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/top_lab9.sv,,register,,,,,,,,
-C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/top_lab9.sv,1603386500,systemVerilog,,C:/Users/aaron_mendoza1/Documents/GitHub/Lab09/Lab09_project/codedirectory/basys3_lab9.sv,,top_lab9,,,,,,,,
+C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/Lab09_project.sim/sim_3/behav/xsim/glbl.v,1603402281,verilog,,,,glbl,,,,,,,,
+C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/alu.sv,1603402281,systemVerilog,,C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/register.sv,,alu,,,,,,,,
+C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/basys3_lab9.sv,1603402281,systemVerilog,,,,basys3_lab9,,,,,,,,
+C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/register.sv,1603402281,systemVerilog,,C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/top_lab9.sv,,register,,,,,,,,
+C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/top_lab9.sv,1603402281,systemVerilog,,C:/Users/ammic/OneDrive/Documents/GitHub/Lab09/Lab09_project/codedirectory/basys3_lab9.sv,,top_lab9,,,,,,,,

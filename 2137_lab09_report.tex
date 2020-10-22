@@ -54,7 +54,7 @@
 }
 
 
-
+\usepackage[section]{placeins}
 
 %======================================================
 %=========== Body  ====================================
@@ -76,12 +76,109 @@ Type the summary of your experiment and results here.
 
 \section*{Results}
 
-In this section, put your simulation waveforms, results tables, pictures of hardware, and any other required items.
+\subsection*{Expected Results Tables}
 
+\begin{table*}[ht]\centering
+	\caption{\textit{register} expected results table}
+	\label{ALU:tbl:register_ERT}\medskip
+	\begin{tabular}{l|rrrrrrrrrrr}
+		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40 & 40-45 & 45-50 & 50-55 \\
+		\midrule
+		D (hex) & 0 & 0 	  & A & A & 3 	    & 3 	  & 0 	    & 0 & 0$\to$6 & 6 & 6 \\
+		clk     & 0 & 1 	  & 0 & 1 & 0 	    & 1 	  & 0 	    & 1 & 0 	  & 1 & 0 \\
+		en  	& 0 & 0 	  & 1 & 1 & 1$\to$0 & 0$\to$1 & 1$\to$0 & 0 & 0$\to$1 & 1 & 1 \\
+		rst 	& 0 & 0$\to$1 & 0 & 0 & 0 		& 0 	  & 0		& 0 & 0		  & 0 & 0 \\
+		\midrule
+		Q (hex) & X & X$\to$0 & 0 & 0$\to$A & A & A & A & A & A & A$\to$6 & 6\\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+\FloatBarrier
+
+\begin{table*}[ht]\centering
+	\caption{\textit{alu} expected results table skeleton}
+	\label{ALU:tbl:alu_ERT}\medskip
+	\begin{tabular}{l|rrrrrr}
+		Time (ns): & 0-10 & 10-20 & 20-30 & 30-40 & 40-50 & 50-60 \\
+		\midrule
+		in0 & A & A & A & A & A & A \\
+		in1 & 7 & 7 & 7 & 7 & 7 & 7 \\
+		op	& 0 & 1 & 2 & 3 & 4 & default \\
+		\midrule
+		out & 17 & 3 & 2 & 15 & 13 & 10 \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+\subsection*{Simulation Waveforms}
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=19cm 15cm 0.5cm 4.5cm,clip]{register_tb_screenshot}
+	\caption{Register Testbench Simulation}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=19cm 15cm 0.5cm 4.5cm,clip]{alu_tb_screenshot}
+	\caption{ALU Testbench Simulation}
+	\label{fig:sim_with_table}
+\end{figure}
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=19cm 15cm 0.5cm 4.5cm,clip]{top_level_sim}
+	\caption{Top-Level Simulation}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\subsection*{Basys3 Board Pictures}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=15cm 15cm 0.5cm 4.5cm,clip]{add}
+	\caption{LEDs after Adding 8-bit hexadecimal 14 and 7A}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=15cm 15cm 0.5cm 4.5cm,clip]{subtract}
+	\caption{LEDs after Subtracting 8-bit hexadecimal 14 and 7A}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=15cm 15cm 0.5cm 4.5cm,clip]{and}
+	\caption{LEDs after "AND"ing 8-bit hexadecimal 14 and 7A}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=15cm 15cm 0.5cm 4.5cm,clip]{or}
+	\caption{LEDs after "OR"ing  8-bit hexadecimal 14 and 7A}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=15cm 15cm 0.5cm 4.5cm,clip]{xor}
+	\caption{LEDs after "XOR"ing 8-bit hexadecimal 14 and 7A}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=1\textwidth,trim=15cm 15cm 0.5cm 4.5cm,clip]{default}
+	\caption{LEDs after putting default operation of 8-bit hexadecimal 14 and 7A}
+	\label{fig:sim_with_table}
+\end{figure}
 
 \section*{Code}
 
-Include all of the code you wrote or modified here.
+\Verilog[firstline=22, lastline=37, caption=Register Module Code]{Lab09_project/codedirectory/register.sv}|
+
+\Verilog[firstline=22, lastline=53, caption=Register Testbench Code]{Lab09_project/codedirectory/register_tb.sv}|
+
+\Verilog[firstline=22, lastline=49, caption=ALU Module Code]{Lab09_project/codedirectory/alu.sv}|
+
+\Verilog[firstline=22, lastline=47, caption=ALU Testbench Code]{Lab09_project/codedirectory/alu_tb.sv}|
+
+\Verilog[firstline=22, lastline=58, caption=Top Level Module Code]{Lab09_project/codedirectory/top_lab9.sv}|
 
 
 \end{document}
