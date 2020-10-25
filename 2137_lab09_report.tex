@@ -68,7 +68,15 @@
 
 \section*{Summary}
 
-Type the summary of your experiment and results here.  
+The purpose of this lab was to build an Arithmetic Logic Unit (ALU) that has the capbility of doing a few operations. In order to do this, I used a register to store a number.
+
+In this lab, we used sequential logic rather than just combinational logic. The output of combinational logic does not depend on time; it only depends on the input at the current instant. On the other hand, sequential logic depends on the current input as well as the previous output. There are four types of sequential logic that we have learned about during this lab. The first is an SR latch. An SR latch has two inputs, set and reset, and an output called Q. When S is asserted, Q is set to a 1, whereas when R is asserted, Q is set to a 0. SR latches have illegal states where the output Q and its opposite Qn become the same after a few loops. This happens when S and R are either both asserted (when using NOR gates) or when they are both not asserted (when using NAND gates). Another type of latch is a D latch. By adding two more gates to an SR latch and another input called enable, the D-latch can control when data can or cannot be written into the memory element. The third memory device we learned about is a D flip-flop. A D flip-flop has three inputs: data, reset, and clock. Data controls the next state. clock controls whether or not the next state will be written into Q, and reset sends Q to 0 regardless of the other two inputs. The last memory device we learned about is a D register.
+
+The D register was the first module I built in this lab. It takes four inputs: clock, reset, enable, and data. The register sets Q equal to D on the positive edge of the clock as well as if enable is on, and reset sets Q to 0 regardless of everything else.
+
+The second module I built was an ALU. It has three inputs: in0, in1, and op for operation. It works like a MUX. Based on what the operation is, the output changes. For example, if the operation "add" was chosen, then the inputs would be added together to get the output.
+
+The final module built contained two D registers and the ALU module built. The first D register stores the first number in hexadecimal and inputs it into in1 of the ALU. After saving that first number using a button connected to enable, the second input of the ALU is used simply by changing the switches. The operation is determined by switches 11:8 of the Basys3 board. The second D register takes the output of the ALU and only outputs it onto the LEDs of the board if the button connected to that enable input is asserted. I generated a bitstream for my SystemVerilog code and programmed it into my Basys3 board to check my results and see if my code was working properly.
 
 
 
